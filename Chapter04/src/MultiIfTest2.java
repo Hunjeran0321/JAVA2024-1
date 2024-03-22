@@ -35,26 +35,29 @@ public class MultiIfTest2 {
 			int score = stdIn.nextInt();
 						
 	// 2. 점수가 90점 이상인가?
-	if (score >= 90) {
+	if (score >= 90 && score <= 100) { // 90점 이상이고, 100점 이하 
 		System.out.println("A학점입니다."); // 2-1 A학점입니다. 출력
 	} 
 	// 3. 아니면 점수가 80점 이상인가?	
-	else if (score >= 80) { 
+	else if (score >= 80 && score < 90) { // 80점 이상이고, 90점 미만
 		System.out.println("B학점입니다."); // 3-1 B학점입니다. 출력
 	} 
 	// 4. 아니면 점수가 70점 이상인가?
-	else if (score >= 70){
+	else if (score >= 70  && score < 80){ // 70점 이상이고, 80점 미만
 		System.out.println("C학점입니다."); // 4-1 C학점입니다. 출력
 	// 5. 아니면 점수가 60점 미만인가?
 	}
-	else if (score >= 60){
+	else if (score >= 60 && score < 70){ // 60점 이상이고, 70점 미만
 		System.out.println("D학점입니다."); // 5-1 D학점입니다. 출력
 }
 	// 6. 아니면(나머지는)
-	else {
+	else if (score > 0 && score < 60){
 		System.out.println("F학점입니다."); // 6-1 F학점입니다. 출력
 		
 }
+	else {
+		System.out.println("잘못된 점수 입력입니다.");
+	}
 	// 조건과 상관없이 무조건 출력되는 문장.
 		System.out.println("프로그램 종료");
 	}
